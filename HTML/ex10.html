@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging Example</title>
+
+    <script>
+
+        let count = 5;
+
+        console.log("Count Value:", count);
+
+        function test() {
+
+            let total = count + 10;
+
+            console.log("Total Value:", total);
+
+            debugger;
+
+            document.getElementById("result").innerHTML = total;
+        }
+
+    </script>
+</head>
+<body>
+
+    <h2>Chrome DevTools Example</h2>
+
+    <button onclick="test()">
+        Click Here
+    </button>
+
+    <p id="result"></p>
+
+</body>
+</html>
