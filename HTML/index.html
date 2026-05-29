@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CTS HTML5 Practice</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        h2{
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        #welcomeBanner{
+            background-color: blue;
+            color: white;
+            padding: 15px;
+        }
+
+        .highlight{
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        .gallery{
+            width: 200px;
+            height: 150px;
+            border: 2px solid black;
+        }
+
+        form{
+            background-color: lightblue;
+            width: 300px;
+            padding: 20px;
+        }
+
+    </style>
+
+    <script>
+
+        function showMessage(){
+
+            document.getElementById("msg").innerHTML =
+            "Registration Successful!";
+        }
+
+        function validatePhone(){
+
+            let phone =
+            document.getElementById("phone").value;
+
+            if(phone.length != 10){
+                alert("Enter valid 10 digit number");
+            }
+        }
+
+        function showFee(){
+
+            let fee =
+            document.getElementById("event").value;
+
+            document.getElementById("fee").innerHTML =
+            "Event Fee: " + fee;
+        }
+
+        function enlarge(img){
+
+            img.style.width = "300px";
+        }
+
+        function countChars(){
+
+            let text =
+            document.getElementById("feedback").value;
+
+            document.getElementById("count").innerHTML =
+            "Characters: " + text.length;
+        }
+
+        function readyMessage(){
+
+            document.getElementById("videoMsg").innerHTML =
+            "Video ready to play";
+        }
+
+        function testDebug(){
+
+            let number = 10;
+
+            console.log(number);
+
+            debugger;
+
+            document.getElementById("result").innerHTML =
+            number;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2>
+        Exercise 1 - HTML5 Base Template
+    </h2>
+
+    <p>
+        HTML5 document structure created successfully.
+    </p>
+
+    <hr>
+
+
+    <h2>
+        Exercise 2 - Navigation and Linking
+    </h2>
+
+    <nav>
+
+        <a href="#home">Home</a> |
+
+        <a href="#events">Events</a> |
+
+        <a href="#contact">Contact</a> |
+
+        <a href="help.html" target="_blank">
+            Help
+        </a>
+
+    </nav>
+
+    <section id="home">
+
+        <h3>Home Section</h3>
+
+        <p>Welcome to Community Portal</p>
+
+    </section>
+
+    <section id="events">
+
+        <h3>Events Section</h3>
+
+        <p>Upcoming Events Available</p>
+
+    </section>
+
+    <section id="contact">
+
+        <h3>Contact Section</h3>
+
+        <p>Email : support@gmail.com</p>
+
+    </section>
+
+    <hr>
+
+
+    <h2>
+        Exercise 3 - Welcome Banner
+    </h2>
+
+    <div id="welcomeBanner">
+
+        Welcome Back User!
+
+    </div>
+
+    <br>
+
+    <p class="highlight">
+
+        Special Community Offer Available
+
+    </p>
+
+    <p>
+
+        Register Today and get
+
+        <span style="color:red; font-weight:bold;">
+
+            50% Discount
+
+        </span>
+
+    </p>
+
+    <hr>
+
+
+    <h2>
+        Exercise 4 - Image Gallery
+    </h2>
+
+    <table border="1">
+
+        <caption>
+            Community Event Gallery
+        </caption>
+
+        <tr>
+
+            <td>
+
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f"
+                alt="Music Event"
+                title="Music Event"
+                class="gallery">
+
+                <p>Music Festival</p>
+
+            </td>
+
+            <td>
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+                alt="Food Event"
+                title="Food Event"
+                class="gallery">
+
+                <p>Food Carnival</p>
+
+            </td>
+
+            <td>
+
+                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b"
+                alt="Sports Event"
+                title="Sports Event"
+                class="gallery">
+
+                <p>Sports Meet</p>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <hr>
+
+
+    <h2>
+        Exercise 5 - Event Registration Form
+    </h2>
+
+    <form onsubmit="showMessage(); return false;">
+
+        <input type="text"
+        placeholder="Enter Name"
+        required autofocus>
+
+        <br><br>
+
+        <input type="email"
+        placeholder="Enter Email"
+        required>
+
+        <br><br>
+
+        <input type="date" required>
+
+        <br><br>
+
+        <select required>
+
+            <option value="">
+                Select Event
+            </option>
+
+            <option>
+                Music
+            </option>
+
+            <option>
+                Sports
+            </option>
+
+            <option>
+                Workshop
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <textarea placeholder="Enter Message">
+        </textarea>
+
+        <br><br>
+
+        <button type="submit">
+
+            Register
+
+        </button>
+
+        <p id="msg"></p>
+
+    </form>
+
+    <hr>
+
+
+    <h2>
+        Exercise 6 - Event Handling
+    </h2>
+
+    Phone Number :
+
+    <input type="text"
+    id="phone"
+    onblur="validatePhone()">
+
+    <br><br>
+
+    Select Event :
+
+    <select id="event"
+    onchange="showFee()">
+
+        <option value="100">
+            Music
+        </option>
+
+        <option value="200">
+            Sports
+        </option>
+
+        <option value="300">
+            Workshop
+        </option>
+
+    </select>
+
+    <p id="fee"></p>
+
+    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f"
+    width="150"
+    ondblclick="enlarge(this)">
+
+    <br><br>
+
+    Feedback :
+
+    <textarea id="feedback"
+    onkeyup="countChars()"></textarea>
+
+    <p id="count"></p>
+
+    <button onclick="alert('Feedback Submitted')">
+
+        Submit
+
+    </button>
+
+    <hr>
+
+
+    <h2>
+        Exercise 7 - Video Invite
+    </h2>
+
+    <video width="400"
+    controls
+    oncanplay="readyMessage()">
+
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4"
+        type="video/mp4">
+
+    </video>
+
+    <p id="videoMsg"></p>
+
+    <hr>
+
+
+    <h2>
+        Exercise 8 - Local Storage
+    </h2>
+
+    <select id="preference">
+
+        <option>Music</option>
+
+        <option>Sports</option>
+
+        <option>Workshop</option>
+
+    </select>
+
+    <br><br>
+
+    <button onclick="
+        localStorage.setItem(
+        'event',
+        document.getElementById('preference').value)">
+        Save Preference
+    </button>
+
+    <button onclick="
+        localStorage.clear();
+        sessionStorage.clear();">
+
+        Clear Preferences
+
+    </button>
+
+    <hr>
+
+
+    <h2>
+        Exercise 9 - Geolocation
+    </h2>
+
+    <button onclick="navigator.geolocation.getCurrentPosition(
+
+        function(position){
+
+            document.getElementById('location').innerHTML =
+
+            'Latitude : ' +
+
+            position.coords.latitude +
+
+            '<br>Longitude : ' +
+
+            position.coords.longitude;
+
+        }
+
+    )">
+
+        Find Nearby Events
+
+    </button>
+
+    <p id="location"></p>
+
+    <hr>
+
+
+    <h2>
+        Exercise 10 - Debugging with Chrome DevTools
+    </h2>
+
+    <button onclick="testDebug()">
+
+        Click Here
+
+    </button>
+
+    <p id="result"></p>
+
+</body>
+
+</html>
