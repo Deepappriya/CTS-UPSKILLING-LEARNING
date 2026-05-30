@@ -1,0 +1,184 @@
+/*External css*/
+/* Header Styles */
+h1{
+    text-align:center;
+}
+
+/* Navigation Styles */
+nav{
+    background-color:#003366;
+}
+
+/*  Ex 3: Selectors Playground*/
+*{
+    margin:0;
+    padding:0;
+}
+
+h2{
+    color:darkblue;
+}
+
+#mainHeader{
+    background-color:lightblue;
+    padding:15px;
+}
+
+.eventCard{
+    border:1px solid gray;
+    padding:10px;
+    margin:10px;
+}
+
+h3,p{
+    font-family:Arial;
+}
+
+/*Ex: 4 Color and Background Styling*/
+body{
+    background-color:#f4f4f4;
+    background-image:url("images/city.jpg");
+}
+
+.eventCard{
+    background-color:rgba(0,0,255,0.1);
+}
+
+h2{
+    background:linear-gradient(to right,
+    #003366,
+    #66ccff);
+
+    color:white;
+}
+
+/* Ex: 5 Typography*/
+body{
+    font-family:'Poppins',sans-serif;
+}
+
+.description{
+
+    font-size:18px;
+
+    font-style:italic;
+
+    font-weight:500;
+
+    text-align:justify;
+
+    text-transform:capitalize;
+
+    letter-spacing:2px;
+
+    line-height:30px;
+}
+
+/* Ex: 6 Link and List Styling*/
+a:link{
+    color:blue;
+}
+
+a:hover{
+    color:red;
+}
+
+a:visited{
+    color:purple;
+}
+
+a:active{
+    color:green;
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav li{
+    display:inline-block;
+    margin:10px;
+    padding:10px;
+}
+
+/*Ex:7 Table Styling  */
+ table{
+    width:80%;
+    border-collapse:collapse;
+}
+
+th,td{
+
+    border:1px solid black;
+
+    padding:10px;
+
+    text-align:center;
+}
+
+th{
+    background-color:lightblue;
+}
+
+tr:nth-child(even){
+    background-color:#f2f2f2;
+}
+
+/* Ex: 8 Box Model*/
+.eventCard{
+
+    border:2px solid blue;
+
+    padding:20px;
+
+    margin:20px;
+}
+
+input:focus{
+
+    outline:3px solid red;
+}
+
+.hidden{
+    visibility:hidden;
+}
+
+.none{
+    display:none;
+}
+
+/*Ex: 9 Multiple Columns*/
+.news{
+
+    column-count:2;
+
+    column-gap:30px;
+
+    column-rule:1px solid gray;
+}
+
+/*Ex:10 Reponsive Design */
+.container{
+
+    display:flex;
+
+    gap:20px;
+}
+
+@media screen and (max-width:768px){
+
+    .container{
+
+        flex-direction:column;
+    }
+
+    img{
+
+        width:100%;
+    }
+
+    body{
+
+        font-size:14px;
+    }
+}
