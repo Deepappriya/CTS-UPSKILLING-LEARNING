@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Portal</title>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- Ex: 1 Javascript Basics and Setup-->
+    <h1>Local Community Event Portal</h1>
+	
+    <!-- Ex: 7 DOM Manipulation-->
+<h3>DOM Manipulation</h3>
+    <div id="eventContainer"></div>
+<br><br>
+    <!-- Ex: 8 Event Handling-->
+<h3>Event Handling</h3>
+    <button onclick="registerEvent()">
+Register
+</button>
+
+<select onchange="filterEvent()">
+
+<option>Music</option>
+
+<option>Sports</option>
+
+</select>
+<br><br>
+<input
+type="text"
+onkeydown="searchEvent()">	
+<br><br>
+<!--Ex:11 Working with Forms-->
+<h3>Working with Forms</h3>
+<form id="registerForm">
+
+<input
+type="text"
+name="name">
+
+<input
+type="email"
+name="email">
+
+<select name="event">
+
+<option>Music</option>
+
+<option>Sports</option>
+
+</select>
+
+<button type="submit">
+Register
+</button>
+
+</form>
+
+<p id="error"></p>
+    <script src="main.js"></script>
+
+<br><br>
+<!-- Ex:14 jQuery and  JS Frameworks-->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<button id="registerBtn">
+Register
+</button>
+
+<div id="eventCard">
+Music Festival
+</div>
+<script>
+
+        $("#registerBtn").click(function(){
+
+            $("#eventCard").fadeOut();
+
+            $("#eventCard").fadeIn();
+        });
+
+    </script>
+</body>
+</html>
