@@ -1,0 +1,20 @@
+Step 1: Create _variables.scss
+	$primary: #ff6600;
+	$border-radius: 1rem;
+Step 2: Modify custom.scss
+	@import "variables";
+	@import "./node_modules/bootstrap/scss/bootstrap";
+Step 3: Compile Again
+	npx sass custom.scss custom.css
+Step 4: Test Custom Color
+	Create a button:
+		<button class="btn btn-primary">Test Button</button>
+
+	If compilation succeeds, the button will appear orange instead of the default Bootstrap blue.
+
+Step 5: Verify Installation
+	Run:
+		npm list bootstrap
+		npm list sass
+	It displays the version numbers.
+
