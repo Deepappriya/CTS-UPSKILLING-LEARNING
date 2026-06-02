@@ -1,0 +1,11 @@
+Step 1: Initialize Node Project
+	npm init -y
+Step 2: Install Bootstrap and Sass
+	npm install bootstrap sass
+Step 3: Create custom.scss
+	Create a file named: custom.scss
+	Add:  @import "./node_modules/bootstrap/scss/bootstrap";
+Step 4: Compile SCSS
+	npx sass custom.scss custom.css
+Step 5: Link Generated CSS
+	<link rel="stylesheet" href="custom.css">
