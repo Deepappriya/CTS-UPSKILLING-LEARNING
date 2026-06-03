@@ -1,0 +1,6 @@
+Compile
+	javac HelloWorld.java
+View Bytecode
+	javap HelloWorld
+Detailed Bytecode
+	javap -c HelloWorld
